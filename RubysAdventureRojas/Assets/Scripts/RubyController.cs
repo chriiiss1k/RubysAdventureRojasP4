@@ -15,14 +15,16 @@ public class RubyController : MonoBehaviour
     {
         //create 2 variables to use the unity built in axes
         float horizontial = Input.GetAxis("Horizontal");
-        float vertial = Input.GetAxis("Vertical");
-    
-     //create my movement vector
-     Vector2 position = transform.position;
+        float vertical = Input.GetAxis("Vertical");
 
-     //Create the movement of my character
-     position.x = position.x + 3.0f * horizontial* Time.deltaTime;
-     position.y = position.y + 3.0f * vertical* Time.deltaTime;
+        //create my movement vector
+        Vector2 position = transform.position;
 
-     //Set the new position
-}    transform.position = position;
+        //Create the movement of my character
+        position.x = position.x + 3.0f * horizontial * Time.deltaTime;
+        position.y = position.y + 3.0f * vertical * Time.deltaTime;
+
+        //Set the new position
+        transform.position = position;
+    }
+}
