@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour
 
     Animator animator;
 
+    public object smokeEffect { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,5 +85,6 @@ public class EnemyController : MonoBehaviour
         rigidbody2D.simulated = false;
         //optional if you added the fixed animation
         animator.SetTrigger("Fixed");
+     
     }
 }
